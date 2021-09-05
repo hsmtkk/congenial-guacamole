@@ -5,7 +5,7 @@ WORKDIR /go/src/github.com/hsmtkk/congenial-guacamole
 COPY go.mod /go/src/github.com/hsmtkk/congenial-guacamole/go.mod
 COPY main.go /go/src/github.com/hsmtkk/congenial-guacamole/main.go
 
-RUN go build && ls
+RUN go build
 
 FROM gcr.io/distroless/cc-debian10 AS runtime
 

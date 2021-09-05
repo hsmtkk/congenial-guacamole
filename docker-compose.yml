@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  kaniko:
+    image: gcr.io/kaniko-project/executor:latest
+    volumes:
+      - "/home/ubuntu/repo/congenial-guacamole:/workspace"
+      - "/home/ubuntu/.docker/config.json:/kaniko/.docker/config.json:ro"
+    command: ["--cache", "--cache-repo", "hsmtkk/congenial-guacamole-cache", "--destination", "hsmtkk/congenial-guacamole"]
+
